@@ -4,9 +4,15 @@
 //open sans font
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 
+html {
+  font-size: 100%;
+}
 body {
   font-family: "Open Sans", sans-serif;
   font-weight: $fontMedium;
+  font-size: 1rem;
+  color: $veryDarkCyan;
+  line-height: 1.3;
 }
 
 h1,
@@ -15,4 +21,86 @@ h3,
 h4 {
   font-family: "Poppins", sans-serif;
   font-weight: $fontBold;
+}
+// helper classes
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+.flex {
+  display: flex;
+}
+.jc-sb {
+  justify-content: space-between;
+}
+.ai-c {
+  align-items: center;
+}
+button,
+.btn {
+  border: none;
+  border-radius: 50px;
+  font-size: 1.125rem;
+  box-shadow: 0 5px 10px -5px #b4b4b4;
+}
+.cta {
+  font-weight: $fontExtraBold;
+  font-family: "Open Sans", sans-serif;
+}
+// INTRO
+.intro {
+  background-image: url("/images/bg-hero-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center 363%;
+  background-size: 106%;
+  background-color: hsl(193, 100%, 96%);
+}
+
+// HEADER
+.header {
+  padding-top: 3.5rem;
+  margin-bottom: 8.9375rem;
+  &__logo {
+    & img {
+      width: 12.5rem;
+      height: 2rem;
+    }
+  }
+  &__cta {
+    & .btn {
+      padding: 0.875rem 2.8125rem;
+      background-color: white;
+      font-size: 20px;
+      color: $veryDarkCyan;
+    }
+  }
+}
+
+// HERO
+.hero {
+  padding: 3rem;
+  text-align: center;
+  &__message {
+    margin-bottom: 6.875rem;
+    & h1 {
+      font-size: 3rem;
+      line-height: 1.55;
+      margin-bottom: 4.375rem;
+    }
+    & p {
+      font-size: 1.5rem;
+      line-height: 1.4;
+      margin-bottom: 4.375rem;
+    }
+    & .btn {
+      padding: 24px 120px;
+      background-color: $pink;
+      color: white;
+    }
+  }
+  &__image {
+    & img {
+      width: 100%;
+    }
+  }
 }
