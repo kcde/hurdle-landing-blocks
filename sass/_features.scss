@@ -1,0 +1,27 @@
+.features {
+  &__card {
+    padding: 100px 90px 72px 90px;
+    text-align: center;
+    box-shadow: 0 10px 33px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    flex-direction: column;
+    &:not(:last-child) {
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__image {
+    margin-bottom: 7.625rem;
+  }
+  &__message {
+    & h2 {
+      margin-bottom: 48px;
+      font-size: 40px;
+    }
+    & p {
+      font-size: 28px;
+      font-weight: $fontSmall;
+      color: $grayishBlue;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+.footer {
+  background-color: $veryDarkCyan;
+  color: white;
+  font-size: 32px;
+  & .container {
+    padding-top: 15.625rem;
+  }
+  &__grid {
+    & grid-1 {
+    }
+    & grid-2 {
+    }
+    & grid-3 {
+    }
+    & grid-4 {
+    }
+  }
+
+  &__logo {
+    & img {
+      width: 20.875rem;
+      height: 3.4375rem;
+      margin-bottom: 3.4375rem;
+    }
+  }
+  &__contacts {
+    & div {
+      margin-bottom: 3.75rem;
+
+      & i {
+        margin-right: 2.8125rem;
+      }
+    }
+  }
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3.75rem;
+    & a:not(:last-child) {
+      margin-bottom: 3.75rem;
+    }
+  }
+
+  &__socials {
+    text-align: center;
+    margin-bottom: 50px;
+    & i {
+      border: 1px solid white;
+      padding: 0.75rem;
+      border-radius: 50%;
+      cursor: pointer;
+      &:not(:last-child) {
+        margin-right: 1.25rem;
+      }
+    }
+  }
+}
+
+.copyright {
+  font-size: 1.5rem;
+  text-align: center;
+  padding-bottom: 6.25rem;
+}
