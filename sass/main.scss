@@ -47,6 +47,9 @@ img {
 .jc-sb {
   justify-content: space-between;
 }
+.ds-r {
+  flex-direction: row;
+}
 .ai-c {
   align-items: center;
 }
@@ -61,6 +64,9 @@ button,
   color: white;
   cursor: pointer;
   transition: all 350ms ease-in-out;
+  @include desktop {
+    padding: 24px 62px;
+  }
 }
 .cta {
   font-weight: $fontExtraBold;
@@ -73,6 +79,9 @@ button,
   background-repeat: no-repeat;
   background-position: center 363%;
   background-size: 106%;
+  @include desktop {
+    background-image: url("/images/bg-hero-desktop.svg");
+  }
   background-color: hsl(193, 100%, 96%);
   margin-bottom: 120px;
 }

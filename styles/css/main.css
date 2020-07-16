@@ -54,6 +54,13 @@ img {
           justify-content: space-between;
 }
 
+.ds-r {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
 .ai-c {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -75,6 +82,13 @@ button,
   transition: all 350ms ease-in-out;
 }
 
+@media screen and (min-width: 1024px) {
+  button,
+  .btn {
+    padding: 24px 62px;
+  }
+}
+
 .cta {
   font-weight: 700;
   font-family: "Open Sans", sans-serif;
@@ -89,9 +103,21 @@ button,
   margin-bottom: 120px;
 }
 
+@media screen and (min-width: 1024px) {
+  .intro {
+    background-image: url("/images/bg-hero-desktop.svg");
+  }
+}
+
 .header {
   padding-top: 3.5rem;
   margin-bottom: 8.9375rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    margin-bottom: 65px;
+  }
 }
 
 .header__logo img {
@@ -111,8 +137,35 @@ button,
   text-align: center;
 }
 
+@media screen and (min-width: 1024px) {
+  .hero {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 70px;
+  }
+}
+
 .hero__message {
   margin-bottom: 6.875rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero__message {
+    text-align: left;
+    margin-bottom: 0;
+    width: 40%;
+    margin-right: 70px;
+  }
 }
 
 .hero__message h1 {
@@ -121,10 +174,34 @@ button,
   margin-bottom: 4.375rem;
 }
 
+@media screen and (min-width: 1024px) {
+  .hero__message h1 {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+  }
+}
+
 .hero__message p {
   line-height: 1.4;
   margin-bottom: 4.375rem;
   font-size: 1.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero__message p {
+    margin-bottom: 1.875rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero__image {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
 }
 
 .features__card {
@@ -139,6 +216,24 @@ button,
           flex-direction: column;
 }
 
+@media screen and (min-width: 1024px) {
+  .features__card {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 50px 90px 50px 90px;
+  }
+}
+
 .features__card:not(:last-child) {
   margin-bottom: 5rem;
 }
@@ -147,9 +242,30 @@ button,
   margin-bottom: 7.625rem;
 }
 
+@media screen and (min-width: 1024px) {
+  .features__image {
+    width: 40%;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .features__message {
+    width: 40%;
+    text-align: left;
+  }
+}
+
 .features__message h2 {
   margin-bottom: 48px;
   font-size: 40px;
+}
+
+@media screen and (min-width: 1024px) {
+  .features__message h2 {
+    margin-bottom: 12px;
+    font-size: 30px;
+  }
 }
 
 .features__message p {
@@ -158,9 +274,24 @@ button,
   color: #808d99;
 }
 
+@media screen and (min-width: 1024px) {
+  .features__message p {
+    line-height: 1.5;
+    font-size: 17px;
+  }
+}
+
 .cta-box {
   text-align: center;
   margin-top: 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .cta-box {
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .cta-box__card {
@@ -179,6 +310,12 @@ button,
   font-size: 30px;
 }
 
+@media screen and (min-width: 1024px) {
+  .cta-box__card h2 {
+    margin-bottom: 40px;
+  }
+}
+
 .footer {
   background-color: #00252e;
   color: white;
@@ -189,14 +326,100 @@ button,
   padding-top: 15.625rem;
 }
 
+@media screen and (min-width: 1024px) {
+  .footer__grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[16];
+        grid-template-columns: repeat(16, 1fr);
+    -ms-grid-rows: 62px 19fr;
+        grid-template-rows: 62px 19fr;
+    font-size: 14px;
+    grid-gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer__grid .grid-1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+    grid-column: 1 / span 5;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer__grid .grid-2 {
+    -ms-grid-column: 7;
+        grid-column-start: 7;
+    -ms-grid-column-span: 3;
+        grid-column-end: span 3;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer__grid .grid-3 {
+    -ms-grid-column: 10;
+        grid-column-start: 10;
+    -ms-grid-column-span: 3;
+        grid-column-end: span 3;
+  }
+}
+
+.footer__grid .grid-4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (min-width: 1024px) {
+  .footer__grid .grid-4 {
+    -ms-grid-column-span: 5;
+        grid-column-end: span 5;
+    -ms-grid-column: 13;
+        grid-column-start: 13;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer__logo {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 18;
+    grid-column: 1 / span 18;
+  }
+}
+
 .footer__logo img {
   width: 20.875rem;
   height: 3.4375rem;
   margin-bottom: 3.4375rem;
 }
 
+@media screen and (min-width: 1024px) {
+  .footer__logo img {
+    margin-bottom: 2.5rem;
+    width: 240px;
+    height: 40px;
+  }
+}
+
 .footer__contacts div {
   margin-bottom: 3.75rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .footer__contacts div {
+    margin-bottom: 24px;
+  }
 }
 
 .footer__contacts div i {
@@ -218,6 +441,12 @@ button,
   margin-bottom: 3.75rem;
 }
 
+@media screen and (min-width: 1024px) {
+  .footer__nav a:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
+
 .footer__socials {
   text-align: center;
   margin-bottom: 50px;
@@ -225,6 +454,7 @@ button,
 
 .footer__socials i {
   border: 1px solid white;
+  font-size: 1rem;
   padding: 0.75rem;
   border-radius: 50%;
   cursor: pointer;
@@ -238,5 +468,11 @@ button,
   font-size: 1.5rem;
   text-align: center;
   padding-bottom: 6.25rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .copyright {
+    font-size: 12px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

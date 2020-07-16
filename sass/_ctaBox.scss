@@ -1,6 +1,11 @@
 .cta-box {
   text-align: center;
   margin-top: 2rem;
+  @include desktop {
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   &__card {
     box-shadow: 0 10px 33px rgba(0, 0, 0, 0.1);
@@ -13,6 +18,9 @@
     & h2 {
       margin-bottom: 60px;
       font-size: 30px;
+      @include desktop {
+        margin-bottom: 40px;
+      }
     }
   }
 }

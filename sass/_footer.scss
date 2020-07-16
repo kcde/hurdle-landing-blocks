@@ -6,26 +6,64 @@
     padding-top: 15.625rem;
   }
   &__grid {
-    & grid-1 {
+    @include desktop {
+      display: grid;
+      grid-template-columns: repeat(16, 1fr);
+      grid-template-rows: 62px 19fr;
+      font-size: 14px;
+      grid-gap: 2rem;
     }
-    & grid-2 {
+
+    & .grid-1 {
+      @include desktop {
+        grid-column: 1 / span 5;
+      }
     }
-    & grid-3 {
+    & .grid-2 {
+      @include desktop {
+        grid-column-start: 7;
+        grid-column-end: span 3;
+      }
     }
-    & grid-4 {
+    & .grid-3 {
+      @include desktop {
+        grid-column-start: 10;
+        grid-column-end: span 3;
+      }
+    }
+    & .grid-4 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      @include desktop {
+        grid-column-end: span 5;
+        grid-column-start: 13;
+      }
     }
   }
 
   &__logo {
+    @include desktop {
+      grid-row: 1 / 2;
+      grid-column: 1 / span 18;
+    }
     & img {
       width: 20.875rem;
       height: 3.4375rem;
       margin-bottom: 3.4375rem;
+      @include desktop {
+        margin-bottom: 2.5rem;
+        width: 240px;
+        height: 40px;
+      }
     }
   }
   &__contacts {
     & div {
       margin-bottom: 3.75rem;
+      @include desktop {
+        margin-bottom: 24px;
+      }
 
       & i {
         margin-right: 2.8125rem;
@@ -38,6 +76,9 @@
     margin-bottom: 3.75rem;
     & a:not(:last-child) {
       margin-bottom: 3.75rem;
+      @include desktop {
+        margin-bottom: 24px;
+      }
     }
   }
 
@@ -46,6 +87,7 @@
     margin-bottom: 50px;
     & i {
       border: 1px solid white;
+      font-size: 1rem;
       padding: 0.75rem;
       border-radius: 50%;
       cursor: pointer;
@@ -60,4 +102,7 @@
   font-size: 1.5rem;
   text-align: center;
   padding-bottom: 6.25rem;
+  @include desktop {
+    font-size: 12px;
+  }
 }

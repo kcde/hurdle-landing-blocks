@@ -5,6 +5,13 @@
     box-shadow: 0 10px 33px rgba(0, 0, 0, 0.1);
     border-radius: 30px;
     flex-direction: column;
+    @include desktop {
+      flex-direction: row-reverse;
+      align-content: center;
+      align-items: center;
+      justify-content: space-between;
+      padding: 50px 90px 50px 90px;
+    }
     &:not(:last-child) {
       margin-bottom: 5rem;
     }
@@ -12,16 +19,32 @@
 
   &__image {
     margin-bottom: 7.625rem;
+    @include desktop {
+      width: 40%;
+      margin-bottom: 0;
+    }
   }
   &__message {
+    @include desktop {
+      width: 40%;
+      text-align: left;
+    }
     & h2 {
       margin-bottom: 48px;
       font-size: 40px;
+      @include desktop {
+        margin-bottom: 12px;
+        font-size: 30px;
+      }
     }
     & p {
       font-size: 28px;
       font-weight: $fontSmall;
       color: $grayishBlue;
+      @include desktop {
+        line-height: 1.5;
+        font-size: 17px;
+      }
     }
   }
 }
